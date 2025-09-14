@@ -110,4 +110,4 @@ Logs are output in JSON format with timestamps and emoji indicators, e.g.:
 
 ## License
 
-This project is licensed under the **Apache-2.0 License**.
+This project is licensed under the **ISC License**.

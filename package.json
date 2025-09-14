@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "Apache-2.0",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^17.2.2",
     "puppeteer-core": "^24.20.0"
