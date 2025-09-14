@@ -1,0 +1,49 @@
+# Windows
+
+[Google Chrome]
+C:\Program Files\Google\Chrome\Application\chrome.exe
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[Chromium]
+C:\Program Files\Chromium\Application\chrome.exe
+C:\Users\<USERNAME>\AppData\Local\Chromium\Application\chrome.exe
+
+[Microsoft Edge]
+C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+
+[Brave]
+C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe
+
+[Opera]
+C:\Users\<USERNAME>\AppData\Local\Programs\Opera\opera.exe
+
+[Vivaldi]
+C:\Users\<USERNAME>\AppData\Local\Vivaldi\Application\vivaldi.exe
+
+---
+
+# Linux
+
+[Google Chrome]
+/usr/bin/google-chrome
+/usr/bin/google-chrome-stable
+
+[Chromium]
+/usr/bin/chromium
+/usr/bin/chromium-browser
+
+[Microsoft Edge]
+/usr/bin/microsoft-edge
+/usr/bin/microsoft-edge-stable
+
+[Brave]
+/usr/bin/brave-browser
+/usr/bin/brave
+
+[Opera]
+/usr/bin/opera
+
+[Vivaldi]
+/usr/bin/vivaldi
+/usr/bin/vivaldi-stable
