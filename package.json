@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT-NC",
   "dependencies": {
     "dotenv": "^17.2.2",
     "puppeteer-core": "^24.20.0"

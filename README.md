@@ -1,4 +1,4 @@
-# [Typing.com](Typing.com "Typing.com") Autotyper
+# [Typing.com](https://typing.com/ "Typing.com") Autotyper
 
 This is a simple Puppeteer script that automates logging into typing.com (student) and complete available custom lessons by simulating human typing with random delays.
 
@@ -110,4 +110,4 @@ Logs are output in JSON format with timestamps and emoji indicators, e.g.:
 
 ## License
 
-This project is licensed under the **ISC License**.
+This project is licensed under the [**MIT Non-Commercial License**](LICENSE).
