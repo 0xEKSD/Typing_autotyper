@@ -65,7 +65,12 @@ const lessons = await page.$$eval(".is-active.dashboard-list.Content.lessons.pan
     const action = node.querySelector(".lesson-action a.lesson-btn")?.innerText.trim().toLowerCase() || "";
     return { title, link, action };
 }));
-console.log(createLog(`${lessons.length} lessons found with actions of: [${lessons.map(l => l.action)}]`, '✅'));
+
+const lessonTypeCount = lessons.reduce((a, w) => {
+    if (w.action === "restart" || w.action === "start" || w.action === "resume") a[w.action] = (a[w.action] || 0) + 1;
+    return a;
+}, { restart: 0, start: 0, resume: 0 });
+console.log(createLog(`${lessons.length} Lessons found: start => ${lessonTypeCount.start}, resume => ${lessonTypeCount.resume}, restart => ${lessonTypeCount.restart}`, '✅'));
 
 const lessonToNavigate = lessons.find(lesson => lesson.action === "resume" || lesson.action === "start");
 
