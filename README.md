@@ -49,7 +49,7 @@ The typing speed is randomized between 150ms and 250ms per keystroke by default.
 You can adjust this range in index.js: 
 
 ```javascript
-const typingSpeed = getRandomSpeed(150, 250);
+await page.keyboard.type(ch, { delay: getRandomDelay(150, 250) });
 ```
 
 For example:
@@ -57,13 +57,13 @@ For example:
 Faster typing:
 
 ```javascript
-const typingSpeed = getRandomSpeed(50, 100);
+await page.keyboard.type(ch, { delay: getRandomDelay(50, 100) });
 ```
 
 Slower typing:
 
 ```javascript
-const typingSpeed = getRandomSpeed(300, 500);
+await page.keyboard.type(ch, { delay: getRandomDelay(300, 500) });
 ```
 
 ### Headless vs Non-Headless Mode
