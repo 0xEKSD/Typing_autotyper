@@ -20,7 +20,7 @@ function createLog(message, emoji) {
     return JSON.stringify({ timestamp, message, emoji });
 };
 
-function getRandomSpeed(min, max) {
+function getRandomDelay(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -87,12 +87,11 @@ if (lessonToNavigate) {
         ]);
     };
 
-    const typingSpeed = getRandomSpeed(150, 250);
     await page.waitForSelector(".screenBasic-lines");
-    console.log(createLog('Lesson typing started. Speed: ' + typingSpeed, '📝'));
+    console.log(createLog('Lesson typing started', '📝'));
     const chars = await page.$$eval(".screenBasic-lines .screenBasic-word .screenBasic-letter", nodes => nodes.map(n => (n.textContent || "").trim()[0] || " "));
     for (const ch of chars) {
-        await page.keyboard.type(ch, { delay: typingSpeed });
+        await page.keyboard.type(ch, { delay: getRandomDelay(150, 250) });
     }
     console.log(createLog('Finished typing lesson', '✅'));
 
