@@ -90,12 +90,13 @@ if (lessonToNavigate) {
     await page.waitForSelector(".screenBasic-lines");
     console.log(createLog('Lesson typing started', '📝'));
     const chars = await page.$$eval(".screenBasic-lines .screenBasic-word .screenBasic-letter", nodes => nodes.map(n => (n.textContent || "").trim()[0] || " "));
+    console.log(createLog('Lesson preview: [' + chars.join('') + ']', '🔍'));
+
     for (const ch of chars) {
         await page.keyboard.type(ch, { delay: getRandomDelay(150, 250) });
     }
     console.log(createLog('Finished typing lesson', '✅'));
 
-    console.log(createLog('Successfully completed all available lessons', '🎉'));
     await browser.close();
     console.log(createLog('Browser closed', '✅'));
 } else {
